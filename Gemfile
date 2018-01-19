@@ -1,0 +1,13 @@
+# Gemfile. If you want to add gems just use that structure so we can all just bundle install them.
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'twitter'
+gem 'thin'
+gem 'sqlite3'
+gem 'erb'
+gem 'geocoder'
+gem 'capybara'
+gem 'rspec'
+gem 'capybara/cucumber'
+gem 'simplecov'

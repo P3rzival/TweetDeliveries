@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <TITLE>Registration</TITLE>
+    
+  <link rel="stylesheet" href="/style/website.css">
+</head>
+<center>
+<body>
+  <header>
+<img src="/images/Pizza.png" alt="Pizza/Fire" width=180px class="Logo"></header>  
+  
+
+  <form action="registration_page" method="post">
+  
+      
+    <p>
+      <label for="twitter_handle">Twitter:</label>
+      <input type="text" name="twitter_handle" value="" required>
+    </p>  
+
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" name="password" value="" required>
+    </p>
+    
+      <p>
+      <label for="re_enter">Confirm Password:</label>
+      <input type="password" name="re_enter" value="" required>
+    </p>  
+    
+    <p>
+      <label for="address_line1">Address 1:</label>
+      <input type="text" name="address_line1" value="" required>
+    </p>
+    
+    <p>
+      <label for="address_line2">Address 2:</label>
+      <input type="text" name="address_line2" value="" required>
+    </p>
+    
+    <p>
+      <label>Pizzeria Prefered:</label>
+      <select name ="pizzeria_address" id="pizzeria_location">
+      <option hidden></option>    
+      <option value="Sheffield">Sheffield</option>
+      <option value="London">London</option>
+      </select>
+    </p>
+      
+    <p>
+      <label for="postcode">Postcode:</label>
+      <input type="text" name="postcode" value="" required>
+    </p>
+      
+    <p>
+      <label for="contact_number">Contact Number:</label>
+      <input type="text" name="contact_number" value="" required>
+    </p>
+      
+    <p2>
+      <input type="submit" name="register" value="Registration">
+    </p2>
+    
+    
+  </form>
+    <p2>
+    <form action="/index" method="get">
+    <input type="submit" value="Home" 
+         name="Home" />
+    </form></p2>
+
+</body>
+</center>    
+<!-- footer -->
+<footer>
+  <p>&copy; Spicy Slice, 2016</p>
+</footer>
+
+<!-- logo image -->
+</html>

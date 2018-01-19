@@ -1,0 +1,152 @@
+/* Peter Bull wrote this source code */
+
+/* ~~~~general tags~~~~ */
+#extra {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+	background-color: white;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+h1 {
+  	text-align: center;
+}
+
+p {
+	font-family: Helvetica;
+    text-align: center;
+}
+
+h2 {
+  	text-align: left;
+  	padding: 20px 0;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+form {
+	padding-bottom: 20px;
+}
+
+/* ~~~~~~~header~~~~~~~ */
+
+header {
+  	font-size: 40px;
+}
+
+header h1 {
+  	font-family: Arial;
+  	line-height: 0.75em;
+}
+
+/* ~~~~~navigation~~~~~ */
+
+nav {
+	margin: 0;
+	padding: 5px 5px;
+	background-color: rgb(200,90,90);
+	color: white;
+	text-align: center;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+nav ul li {
+ 	font-family: Helvetica;
+ 	font-weight: bold;
+ 	font-size: 20px;
+ 	display: inline-block;
+    margin: 0;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+nav ul li a { 
+    padding-left: 68px;
+	text-decoration: none;
+	color: white;
+}
+
+/* ~~~~main content~~~~ */
+
+#splash {
+	font-family: Arial;
+	padding-top: 100px;
+	padding-bottom: 286px;
+	text-align: center;
+}
+
+main {
+	font-family: Arial;
+	padding-bottom: 150px;
+}
+
+main div h2 {
+	text-align: center;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+main ul {
+	padding-bottom: 106px;
+}
+
+main ul li {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.Logo {
+    float: up;
+    float: center;
+	left: 0;
+	top: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+.Sheffield {
+	display: block;
+    margin: 0 auto;
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.container {
+	flex: 0 1 auto;
+	padding-right: 100px;
+}
+
+/* ~~~~~~~footer~~~~~~~ */
+
+footer {
+	position: relative;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	text-align: center;
+	font-size: 0.75em;
+	border-top: 1px solid lightgrey;
+}
+
+/* ~~~~~~~~~end~~~~~~~~ */

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <TITLE>Account</TITLE>
+    
+  <link rel="stylesheet" href="style/website.css">
+</head>
+<center>
+<body>
+    <header>
+<img src="/images/Pizza.png" alt="Pizza/Fire" width=180px class="Logo"></header> 
+    
+    <p>Twitter: <%=h @twitter_handle %></p>
+    <p>Address line 1: <%=h session[:address_line1] %></p>
+    <p>Address line 2: <%=h session[:address_line2] %></p>
+    <p>Postcode: <%=h session[:postcode] %></p>
+    <p>Contact number: <%=h session[:contact_number] %></p>
+    <p>Preffered pizzeria: <%=h session[:pizzeria_address] %></p>
+    
+    
+    <% if @distance <= 5 %>
+       <p>Your address is within the delivery range.</p>
+    <% else %>
+        <p> You are out of the delivery range!</p>
+    <% end %>
+    <p2>
+    <form action="/change" method="get">
+    <input type="submit" value="Edit Profile" 
+         name="Edit Profile" />
+    </form>
+    <form action="/change_pass" method="get">
+    <input type="submit" value="Change password" 
+         name="Change password" />
+    </form>
+     </p2>
+    <p2>
+    <form action="/index" method="get">
+    <input type="submit" value="Home" 
+         name="Home" />
+    </form></p2>
+</body>
+</center>    
+    <footer>
+  <p>&copy; Spicy Slice, 2016</p>
+</footer>
+</html>

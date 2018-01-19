@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+  <TITLE>Account</TITLE>
+    
+  <link rel="stylesheet" href="/style/website.css">
+</head>
+<center>
+<body>
+   <header>
+<img src="/images/Pizza.png" alt="Pizza/Fire" width=180px class="Logo"></header> 
+    <% if !@pass_change %>
+   <form action="change" method="post">
+  
+      
+    <p>
+      <label for="twitter_handle">Twitter:</label>
+      <input type="text" name="twitter_handle" value="<%=h session[:handle] %>" required>
+    </p>  
+
+    <p>
+      <label for="address_line1">Address line 1:</label>
+      <input type="text" name="address_line1" value="<%=h session[:address_line1] %>" required>
+    </p>
+    
+    <p>
+      <label for="address_line2">Address line 2:</label>
+      <input type="text" name="address_line2" value="<%=h session[:address_line2] %>" required>
+    </p>
+      
+    <p>
+      <label for="postcode">Postcode:</label>
+      <input type="text" name="postcode" value="<%=h session[:postcode] %>" required>
+    </p>
+      
+    <p>
+      <label for="contact_number">Contact number:</label>
+      <input type="text" name="contact_number" value="<%=h session[:contact_number] %>" required>
+    </p>
+    
+    <p>
+      <label>Pizzeria prefered:</label>
+      <select name ="pizzeria_address" id="pizzeria_location">
+      <option value="Sheffield">Sheffield</option>
+      <option value="London">London</option>
+      </select>
+    </p>
+       
+    <p>
+      <input type="submit" name="confirm" value="Cancel">
+      <input type="submit" name="confirm" value="Confirm changes">
+    </p>
+       
+    </form>  
+  <% else %>
+    <form action="change_pass" method="post">
+        
+      <p>
+        <lable for="new_pass">New password:</lable>
+        <input type="password" name="new_pass" required>
+      </p>
+        
+      <p>
+        <lable for="confirm_new">Confirm your new password:</lable>
+        <input type="password" name="confirm_new" required>
+      </p>
+        
+      <p2>
+        
+        <input type="submit" name="confirm" value="Confirm changes">
+      </p2>
+       
+       
+     
+    </form><p2>
+    <form action="/index" method="get">
+    <input type="submit" value="Home" 
+         name="Home" />
+    </form></p2>
+  <% end %>
+    
+</body>
+</center>    
+    <footer>
+  <p>&copy; Spicy Slice, 2016</p>
+</footer>
+</html>

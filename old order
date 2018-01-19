@@ -1,0 +1,20 @@
+get '/order' do
+  if session[:admin] != 'yes' then 
+      redirect '/index'  
+  end  
+      @tweets = @client.mentions_timeline  
+      @collect_tweets = Array.new  
+      @delivery_tweets = Array.new  
+      @tweets.each do |tweet|       
+          if tweet.text.include?("#order") && tweet.text.include?("#collect")      
+              @collect_tweets.push(tweet)    
+          elsif tweet.text.include?("#order") && tweet.text.include?("#delivery")      
+              @delivery_tweets.push(tweet)               
+          end    
+          check = @client.friendship?('Spicy_Slice_Piz', tweet.user.screen_name)    
+          if check == false && tweet.user.screen_name != 'Spicy_Slice_Piz'      
+              @client.follow(tweet.user.screen_name)    
+          end  
+      end  
+      erb :order
+  end

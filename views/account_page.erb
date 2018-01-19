@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <TITLE>Account</TITLE>
+    
+  <link rel="stylesheet" href="/style/website.css">
+</head>
+
+<body>
+     <header><h1>Spicy Slice</h1></header>  
+
+  <form action="account_page" method="post">
+  
+    <label for="twitter_handle">Twitter: <%= session[:handle] =%> </label><br>
+    <label for="address_line1">Address 1: <%= @address_line1 =%> </label><br>
+    <label for="address_line2">Address 2: <%= @address_line2 =%> </label><br>
+    <label for="postcode">Postcode: <%= @postcode =%> </label><br>
+    <label for="contact_number">Contact number: <%= @contact_number =%> </label><br>
+    
+    <% if @distance <= 5 %><p> Your address is within the delivery range.</p>
+    <% else %><p> You are out of the delivery range!</p>
+      <% end %>
+    <p>
+      <label for="twitter_handle">Change Twitter:</label>
+      <input type="text" name="twitter_handle" value="">
+    </p>  
+
+    <p>
+      <label for="address_line1">Change address line 1:</label>
+      <input type="text" name="address_line1" value="">
+    </p>
+    
+    <p>
+      <label for="address_line2">Change address line 2:</label>
+      <input type="text" name="address_line2" value="">
+    </p>
+    
+    <p>
+      <label for="postcode">Change Postcode:</label>
+      <input type="text" name="postcode" value="">
+    </p>
+      
+    <p>
+      <input type="submit" name="confirm" value="confirm">
+    </p>
+    
+    
+  </form>
+
+</body>
+    <footer>
+  <p>&copy; Spicy Slice, 2016</p>
+</footer>
+
+<img src="/images/Pizza.png" alt="Pizza/Fire" width=180px class="Logo">
+</html>
